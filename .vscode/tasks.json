@@ -1,0 +1,49 @@
+{
+    "version": "2.0.0",
+    "runner": "terminal",
+    "type": "shell",
+    "echoCommand": true,
+    "presentation" : { "reveal": "always" },
+    "tasks": [
+        {
+            "label": "build and run cpp",
+            "command": "g++",
+            "args": [
+                "${file}",
+                "-o",
+                "${fileDirname}\\Release\\${fileBasenameNoExtension}",
+                "-std=c++17",
+                "-O4",
+                "-D LOCAL"
+            ],
+            "group":"test",
+            "problemMatcher": {
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },
+        {
+            "label": "exec",
+            "command": "${fileDirname}\\Release\\${fileBasenameNoExtension}.exe",
+            "group":{
+                "kind": "test",
+                "isDefault": true
+            },
+            "args": [
+            ],
+            "dependsOn": [
+                "build and run cpp"
+            ]
+        }
+    ]
+}
