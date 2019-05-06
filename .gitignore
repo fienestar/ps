@@ -1,2 +1,3 @@
 .vscode/ipch
-Release
+*.exe
+$output.txt

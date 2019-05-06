@@ -11,10 +11,12 @@
             "args": [
                 "${file}",
                 "-o",
-                "${fileDirname}\\Release\\${fileBasenameNoExtension}",
+                "${fileDirname}\\Release\\${fileBasenameNoExtension}.exe",
                 "-std=c++17",
                 "-O4",
-                "-D LOCAL"
+                "-DLOCAL(x)=(x)",
+                "-DOUTPUT_TO_FILE=freopen(\\\"$output.txt\\\",\\\"w\\\",stdout)",
+                "-DINPUT_FROM_FILE=freopen(\\\"input\\\\${fileBasenameNoExtension}.txt\\\",\\\"r\\\",stdin)"
             ],
             "group":"test",
             "problemMatcher": {
@@ -34,12 +36,15 @@
         },
         {
             "label": "exec",
-            "command": "${fileDirname}\\Release\\${fileBasenameNoExtension}.exe",
+            "command": "cd",
             "group":{
                 "kind": "test",
                 "isDefault": true
             },
             "args": [
+                "${fileDirname}",
+                "&&",
+                "Release\\${fileBasenameNoExtension}.exe"
             ],
             "dependsOn": [
                 "build and run cpp"
