@@ -1,3 +1,4 @@
 .vscode/ipch
 *.exe
 $output.txt
+test.cpp

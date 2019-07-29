@@ -1,6 +1,6 @@
 // 사용된 알고리즘: 
-// R: X
-// T: 0
+// R: O
+// T: 1
 
 #include <bits/stdc++.h>
 
@@ -10,16 +10,16 @@ using namespace std;
 #define LOCAL(x) ((void)0)
 #endif
 #define endl "\n"
-#define elif else if
-#define ifn(v) if(v);else
-#define elifn(v) else ifn(v)
 
 int main()
 {
-    //LOCAL(OUTPUT_TO_FILE);
+    LOCAL(OUTPUT_TO_FILE);
     //LOCAL(INPUT_FROM_FILE);
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
     // Code here!
-    
+    size_t N;
+    cin >> N;
+    for(size_t i=1;i<=9;++i)
+        cout << N << " * " <<  i << " = " << N*i << endl;
 }

@@ -10,9 +10,6 @@ using namespace std;
 #define LOCAL(x) ((void)0)
 #endif
 #define endl "\n"
-#define elif else if
-#define ifn(v) if(v);else
-#define elifn(v) else ifn(v)
 
 int main()
 {
@@ -21,5 +18,19 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
     // Code here!
+    size_t N;
+
+    cin >> N;
+
+    vector<size_t> v(N);
+
+    for(auto& i:v)
+        cin>>i;
+
+    vector<int> sq(N);
+
     
+    
+    for(auto& i:sq)
+        cout << i << " ";
 }

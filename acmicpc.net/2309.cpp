@@ -17,12 +17,13 @@ int main()
     static int v[9],sum=0;
     for(auto& i:v){ cin>>i; sum+=i; }
     sort(v,v+9);
-    loop(i,9)loop(j,9){
-	if(i==j)continue;
-        if(sum-v[i]-v[j]==100){
-	    for(size_t k=0;k!=9;++k)
-		if(k!=i&&k!=j)cout << v[k] << "\n";
-	    return 0;
-	}
-    }
+    loop(i,9)
+        loop(j,9){
+	        if(i==j)continue;
+            if(sum-v[i]-v[j]==100){
+	            for(size_t k=0;k!=9;++k)
+		            if(k!=i&&k!=j)cout << v[k] << "\n";
+	            return 0;
+	        }
+        }
 }

@@ -12,7 +12,7 @@
                 "_UNICODE",
                 "LOCAL(x)=(x)",
                 "OUTPUT_TO_FILE=freopen(\"$output.txt\",\"w\",stdout)",
-                "INPUT_FROM_FILE=freopen(\"input\\현재_파일_이름.txt\",\"r\",stdin)"
+                "INPUT_FROM_FILE=freopen(\"input\\\\현재_파일_이름.txt\",\"r\",stdin)"
             ],
             "windowsSdkVersion": "10.0.17763.0",
             "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/VC/Tools/MSVC/14.16.27023/bin/Hostx64/x64/cl.exe",
