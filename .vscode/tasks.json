@@ -17,7 +17,6 @@
                 "main.exe",
                 "-std=c++17",
                 "-O4",
-                "-DLOCAL(x)=(x)",
                 "&&",
                 "main.exe",
                 "<",
