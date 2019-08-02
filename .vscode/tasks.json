@@ -9,6 +9,7 @@
             "label": "build and run cpp",
             "command": "cd",
             "args": [
+                "/d",
                 "${fileDirname}",
                 "&&",
                 "g++",
@@ -18,9 +19,20 @@
                 "-std=c++17",
                 "-O4",
                 "&&",
+                "echo",
+                "----------input----------",
+                "&&",
+                "type",
+                "_input.txt",
+                "&&",
+                "echo.",
+                "&&",
+                "echo",
+                "---------output----------",
+                "&&",
                 "main.exe",
                 "<",
-                "$input.txt"
+                "_input.txt"
             ],
             "group":{
                 "kind": "test",

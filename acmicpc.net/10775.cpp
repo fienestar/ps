@@ -55,6 +55,7 @@ int main()
     while(P--){
 
         cin>>gi;
+
         if(gi=root(gi)) // root(gi)가 도킹 위치
             merge(gi,gi-1); // 해당 집합의 도킹위치를 앞 집합의 도킹위치로 바꾼다.
         else // root 가 0이 됐음(도킹 자리 없음)
