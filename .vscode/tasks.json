@@ -7,18 +7,26 @@
     "tasks": [
         {
             "label": "build and run cpp",
-            "command": "g++",
+            "command": "cd",
             "args": [
-                "${file}",
+                "${fileDirname}",
+                "&&",
+                "g++",
+                "${fileBasename}",
                 "-o",
-                "${fileDirname}\\Release\\${fileBasenameNoExtension}.exe",
+                "main.exe",
                 "-std=c++17",
                 "-O4",
                 "-DLOCAL(x)=(x)",
-                "-DOUTPUT_TO_FILE=freopen(\\\"$output.txt\\\",\\\"w\\\",stdout)",
-                "-DINPUT_FROM_FILE=freopen(\\\"input\\\\${fileBasenameNoExtension}.txt\\\",\\\"r\\\",stdin)"
+                "&&",
+                "main.exe",
+                "<",
+                "$input.txt"
             ],
-            "group":"test",
+            "group":{
+                "kind": "test",
+                "isDefault": true
+            },
             "problemMatcher": {
                 "fileLocation": [
                     "relative",
@@ -33,22 +41,6 @@
                     "message": 5
                 }
             }
-        },
-        {
-            "label": "exec",
-            "command": "cd",
-            "group":{
-                "kind": "test",
-                "isDefault": true
-            },
-            "args": [
-                "${fileDirname}",
-                "&&",
-                "Release\\${fileBasenameNoExtension}.exe"
-            ],
-            "dependsOn": [
-                "build and run cpp"
-            ]
         }
     ]
 }

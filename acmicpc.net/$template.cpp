@@ -6,18 +6,8 @@
 
 using namespace std;
 
-#ifndef LOCAL
-#define LOCAL(x) ((void)0)
-#endif
-#define endl "\n"
-#define elif else if
-#define ifn(v) if(v);else
-#define elifn(v) else ifn(v)
-
 int main()
 {
-    //LOCAL(OUTPUT_TO_FILE);
-    //LOCAL(INPUT_FROM_FILE);
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
     // Code here!
