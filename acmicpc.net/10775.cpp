@@ -18,14 +18,6 @@
 
 using namespace std;
 
-#ifndef LOCAL
-#define LOCAL(x) ((void)0)
-#endif
-#define endl "\n"
-#define elif else if
-#define ifn(v) if(v);else
-#define elifn(v) else ifn(v)
-
 vector<size_t> uf;
 
 size_t root(size_t X)
